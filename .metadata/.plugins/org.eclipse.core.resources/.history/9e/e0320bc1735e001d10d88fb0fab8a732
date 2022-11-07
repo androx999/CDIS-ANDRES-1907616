@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Run {
+	public static void main(String[] args) {
+		Scanner text = new Scanner(System.in);
+		Scanner entrada = new Scanner(System.in);
+		
+		//int numero = 1;
+		//String saludo = "Hola Mundo";
+		
+		String name;
+		System.out.println("\nDigite su nombre: ");
+		name = text.nextLine();
+		
+		int edad;
+		System.out.println("\nPor favor ingrese su edad:");
+		edad = entrada.nextInt();
+		
+		System.out.println("\n El nombre ingresado es: "+name+" de edad"+edad);
+	}
+}
