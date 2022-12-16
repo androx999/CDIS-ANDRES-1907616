@@ -92,18 +92,8 @@ public class Cuenta implements Serializable{
 		return serialVersionUID;
 	}
 
-	public List<Tarjeta> getTarjetas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	public void setTarjetas(List<Tarjeta> tarjetas) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public List<Tarjeta> getTarjetas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
+
 }

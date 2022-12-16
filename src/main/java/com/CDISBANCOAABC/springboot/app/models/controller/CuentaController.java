@@ -66,7 +66,7 @@ public class CuentaController {
 		cuentaDao.save(cuenta);
 		status.setComplete();
 		
-		return "redirecr:index";
+		return "redirect:index";
 	}
 	
 	 @RequestMapping(path="/eliminarcuenta/{id}")

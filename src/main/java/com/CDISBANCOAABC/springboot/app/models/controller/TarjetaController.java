@@ -89,9 +89,6 @@ public class TarjetaController {
 			model.addAttribute("result",false);
 		}
 		Cuenta cuenta = cuentaDao.findOne(tarjeta.getIdCuentaAux());
-		List<Tarjeta> tarjetas = cuenta.getTarjetas();
-		tarjetas.add(tarjeta);
-		cuenta.setTarjetas(tarjetas);
 		model.addAttribute("titulo","Formulario de tarjeta");
 		model.addAttribute("mensaje", "Se envio la informacion correctamente");
 		tarjetaDao.save(tarjeta);
