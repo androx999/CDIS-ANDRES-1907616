@@ -34,4 +34,18 @@ public class TarjetaDaoImpl implements ITarjetaDao {
 	    	}
 	    }
 
+		@Override
+		@Transactional(readOnly = true)
+		public Tarjeta findOne(Long id) {
+			// TODO Auto-generated method stub
+			return em.find(Tarjeta.class, id);
+		}
+
+		@Override
+		@Transactional
+		public void delete(Long id) {
+			// TODO Auto-generated method stub
+			em.remove(findOne(id));
+		}
+
 }

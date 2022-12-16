@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.CDISBANCOAABC.springboot.app.models.entity.Cuenta;
 
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
@@ -32,6 +33,16 @@ public class CuentaDaoImpl implements ICuentaDao {
     		em.persist(cuenta);
     	}
     }
+
+	@Override
+	public Cuenta findOne(Long id) {
+		return em.find(Cuenta.class, id);
+	}
+
+	@Override
+	public void delete(Long id) {
+		em.remove(findOne(id));
+	}
     
 
 }

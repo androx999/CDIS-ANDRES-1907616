@@ -2,6 +2,7 @@ package com.CDISBANCOAABC.springboot.app.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -89,5 +90,20 @@ public class Cuenta implements Serializable{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public List<Tarjeta> getTarjetas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setTarjetas(List<Tarjeta> tarjetas) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<Tarjeta> getTarjetas() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
