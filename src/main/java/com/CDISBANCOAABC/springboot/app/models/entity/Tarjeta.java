@@ -37,9 +37,9 @@ public class Tarjeta implements Serializable{
 	@NotEmpty
 	private String icv;
 	
-	@Column(nullable = false)
+	/*@Column(nullable = false)
 	private Long idCuentaAux;
-	
+	*/
 	@Column(name = "vencimiento")
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -93,11 +93,6 @@ public class Tarjeta implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
-	public Long getIdCuentaAux() {
-		return idCuentaAux;
-	}
-	
 	
 	
 }

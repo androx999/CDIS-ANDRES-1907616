@@ -8,7 +8,7 @@
 	<h3 th:text="${titulo}"></h3>
 	<hr>
 	
-	<a th:href="@{/formtarjeta}">Registrar tarjets</a>
+	<a th:href="@{/formtarjeta}">Registrar tarjeta</a>
 
 	<br>
 	<table>
@@ -31,7 +31,7 @@
            <td th:text="${tarjeta.getVencimiento()}"></td>
            <td th:text="${'Nombre: '+tarjeta.getCuenta().getNombre()+' ID: '+tarjeta.getCuenta().getId()}"></td>
            <td><a th:href="@{/formtarjeta/}+${tarjeta.getID()}" th:text="'Editar'"></a></td>
-           <td><a th:href="@{/eliminar/}+${tarjeta.getID()}" th:text="'Eliminar'" onclick="return confirm('¿Desea eliminar la tarjeta?');"></a></td>
+          <td><a th:href="@{/eliminarcuenta/} + ${cuenta.getId()}" th:text="'Eliminar' "onclick="return confirm('Desea eliminar la tarjeta?');"></a></td>
         </tr>
 	  </tbody>
 	</table>

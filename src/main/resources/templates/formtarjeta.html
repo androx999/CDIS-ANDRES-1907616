@@ -34,7 +34,7 @@
     			<tr>
     				<td>ID cuenta</td>
     				<td>
-    				   <select th:field="*{idCuentaAux}">
+    				   <select th:field="*{cuenta}">
     				     <option th:each="cuenta : ${listaCuentas}"
     				             th:value = "${cuenta.getId()}"
     				             th:text="${cuenta.getId()+' Nombre: '+cuenta.getNombre()}"></option>

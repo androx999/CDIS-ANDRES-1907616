@@ -30,20 +30,19 @@ public class Cuenta implements Serializable{
 	private Long id;
 	
 	@Column
-	@NotEmpty
 	private String nombre;
 
 	@Column
-	@NonNull
+	@NotEmpty
 	private double saldo;
 	
 	@Column(name = "numero_telefono")
 	private String numeroTelefono;
 	
 	@Column(name = "dia_creacion")
-	@NonNull
-	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@NotEmpty
+	//@Temporal(TemporalType.DATE)
+	//@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date diaCreacion;
 
 	
@@ -51,7 +50,7 @@ public class Cuenta implements Serializable{
 	public Long getId() {
 		return id;
 	}
-
+    @Column
 	public void setId(Long id) {
 		this.id = id;
 	}

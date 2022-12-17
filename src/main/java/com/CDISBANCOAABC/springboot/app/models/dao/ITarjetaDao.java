@@ -12,6 +12,9 @@ public interface ITarjetaDao {
 	
 	public Tarjeta findOne(Long id);
 	
+	public List<Tarjeta> findByCuentaId(String term);
+	
 	public void delete(Long id);
+
 
 }

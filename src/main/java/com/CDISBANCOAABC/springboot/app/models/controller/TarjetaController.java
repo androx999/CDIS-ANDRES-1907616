@@ -35,14 +35,14 @@ public class TarjetaController {
 	@Autowired
 	private ICuentaDao cuentaDao;
 	
-/*@Autowired
+@Autowired
 	private CuentaPropertyEditor cuentaEditor;
 	
 	@InitBinder
 	public void InitBinder(WebDataBinder binder) {
 		binder.registerCustomEditor(Cuenta.class, "cuenta",cuentaEditor);
 	}
-	*/
+	
 	
 	@RequestMapping(path="/tarjetas-lista",method =RequestMethod.GET)
 	public String listar(Model model) {
@@ -88,11 +88,15 @@ public class TarjetaController {
 		} else {
 			model.addAttribute("result",false);
 		}
-		Cuenta cuenta = cuentaDao.findOne(tarjeta.getIdCuentaAux());
+		//Cuenta cuenta = cuentaDao.findOne(tarjeta.getIdCuentaAux());
 		model.addAttribute("titulo","Formulario de tarjeta");
 		model.addAttribute("mensaje", "Se envio la informacion correctamente");
-		tarjetaDao.save(tarjeta);
-		cuentaDao.save(cuenta);
+		try {
+			tarjetaDao.save(tarjeta);
+		} catch (DataBaseBancoException e) {
+			e.printStackTrace();
+			flash.addFlashAttribute("mensaje", e.getMessage());
+		}
 		status.setComplete();
 		return "redirect:formtarjeta";
 	}

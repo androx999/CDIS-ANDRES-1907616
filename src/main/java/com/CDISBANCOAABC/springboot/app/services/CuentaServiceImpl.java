@@ -28,7 +28,7 @@ public class CuentaServiceImpl implements ICuentaService {
 		Cuenta cuentaResult= null;
 		
 		for(Cuenta cuenta : this.lista) {
-			if(id==cuenta.getId()) {
+			if(id == cuenta.getId()) {
 				cuentaResult = cuenta;
 				break;
 			}

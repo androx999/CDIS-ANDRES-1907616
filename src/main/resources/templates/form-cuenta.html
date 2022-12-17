@@ -13,8 +13,7 @@
 
 	<tbody>
 			<p th:if="${result}" th:text="${mensaje}"></p>
-			<p th:if="${result}" th:text="err : ${errList}">
-			   <span th:text="$err"></span>
+			   <!--<span th:text="$err"></span>-->
 			</p>
 		
 		<div>
@@ -24,29 +23,29 @@
 					<tr>
 						<td>Nombre de cliente</td>
 						<td><input type="text" th:field="*{nombre}" required></td>
-						<!--<div class="msjAdvertencia" th:if="${#fields.hasErrors('nombre')}"
-							th:errors="*{nombre}"></div>-->
+						<div class="msjAdvertencia" th:if="${#fields.hasErrors('nombre')}"
+							th:errors="*{nombre}"></div>
 					</tr>
 					<tr>
 						<td>Saldo</td>
 						<td><input type="text" th:field="*{saldo}" required></td>
-						<!--<div class="msjAdvertencia" th:if="${#fields.hasErrors('saldo')}"
-							th:errors="*{saldo}"></div>-->
+						<div class="msjAdvertencia" th:if="${#fields.hasErrors('saldo')}"
+							th:errors="*{saldo}"></div>
 					</tr>
 					<tr>
 						<td>Numero de telefono</td>
-						<td><input type="text" th:field="*{numeroTelefono}" required></td>
-						<!--<div class="msjAdvertencia"
+						<td><input type="number" th:field="*{numeroTelefono}" required></td>
+						<div class="msjAdvertencia"
 							th:if="${#fields.hasErrors('numeroTelefono')}"
-							th:errors="*{numeroTelefono}"></div>-->
+							th:errors="*{numeroTelefono}"></div>
 					</tr>
 					<tr>
 						<td>Fecha de actual (yyyy-MM-dd)</td>
 						<td><input type="text" th:field="*{diaCreacion}"
 							placeholder="yyyy-MM-dd" required></td>
-						<!--<div class="msjAdvertencia"
+						<div class="msjAdvertencia"
 							th:if="${#fields.hasErrors('diaCreacion')}"
-							th:errors="*{diaCreacion}"></div>-->
+							th:errors="*{diaCreacion}"></div>
 					</tr>
 				</table>
 
